@@ -3,10 +3,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>게시판</title>
+    <title>게시판 수정</title>
 </head>
 <body>
-    <h1>게시판</h1>
-    <a href="/board/createBoard">글작성</a>
+    <h1>게시판 수정</h1>
 </body>
 </html>

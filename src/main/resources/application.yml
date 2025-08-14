@@ -12,7 +12,12 @@ spring:
 
 mybatis:
   mapper-locations: classpath:/mapper/**/*.xml
-  type-aliases-package: com.project.board
+  type-aliases-package: com.project.board.vo
   configuration:
     map-underscore-to-camel-case: true
     jdbc-type-for-null: 'NULL'
+
+logging:
+  level:
+    com.project.board: DEBUG  # 패키지별 로그 레벨
+    org.springframework: INFO
