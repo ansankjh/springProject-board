@@ -1,23 +1,26 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>게시판 작성</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
     <h1>게시판 작성</h1>
     <!-- 게시글 작성 -->
-    <form id="createForm" method="post" action="${pageContext.request.contextPath}/board/createBoard">
+    <form id="createForm" method="post" action="<c:url value='/board/createBoard'/>">
         <div>
-            제목 : <input type="text" name="title" id="title" required>
+            <label>제목</label>
+            <input type="text" name="title" id="title" required>
         </div>
         <div>
-            내용 : <textarea name="content" id="content" rows="5" cols="40" required></textarea>
+            <label>내용</label>
+            <textarea name="content" id="content" rows="5" cols="40" required></textarea>
         </div>
         <div>
-            작성자 : <input type="text" name="writer" id="writer" required>
+            <label>작성자</label>
+            <input type="text" name="writer" id="writer" required>
         </div>
         <button type="button" id="btn">작성하기</button>
     </form>
